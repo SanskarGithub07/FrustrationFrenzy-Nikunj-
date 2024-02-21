@@ -23,7 +23,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/ff.ico" />
       </head>
       <body className={inter.className}>
-        <div className="overflow-hidden">{children}</div>
+        <div className="overflow-hidden">
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );
