@@ -1,10 +1,8 @@
 "use client";
-import { UserButton, useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
-  const {user,isLoaded}=useUser();
   return (
     <header className=" w-full ">
       <nav
@@ -56,17 +54,14 @@ const Navbar = () => {
             About us
           </Link>
         </div>
-        {isLoaded && user && (
-          <>
-            <Link
-              href="/sessions"
-              className=" text-lg px-2 font-bold text-sec-red hover:bg-sec-red hover:text-white-green hover:border-b-black text-center"
-            >
-              Available Doctors
-            </Link>
-            <UserButton afterSignOutUrl="/" />
-          </>
-        )}
+        <>
+          <Link
+            href="/sessions"
+            className=" text-lg px-2 font-bold text-sec-red hover:bg-sec-red hover:text-white-green hover:border-b-black text-center"
+          >
+            Available Doctors
+          </Link>
+        </>
       </nav>
     </header>
   );

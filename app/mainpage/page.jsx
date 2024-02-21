@@ -6,11 +6,10 @@ import Image from "next/image";
 import React from "react";
 import bg from "./bg01.png";
 import bgc1 from "../../public/ffzy.png";
-import rageroom from "../../public/smash_video.mp4";
-import session from "../../public/session_video.mp4";
-import product_v from "../../public/product_video.mp4";
+import rage from "../../public/rageroom.jpg";
+import info from "../../public/info.jpg";
+import sess from "../../public/session.jpg"
 import Link from "next/link";
-import VideoLeft from "../Components/VideoLeft";
 import bg_footer from "../../public/footer_bg.png";
 import Unleash from "../Components/Unleash"
 import { useSpring, animated, config } from "react-spring";
@@ -117,7 +116,7 @@ const MainPage = () => {
         <div className="w-1/4 h-1/3 flex flex-col gap-4 place-content-center ">
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-full">
-              <VideoLeft url={session} />
+              <Image src={sess}/>
             </div>
             <div className="text-white text-2xl font-extrabold font-dancing absolute">
               Personal Guidance
@@ -137,7 +136,7 @@ const MainPage = () => {
         <div className="w-1/4 h-1/3 flex flex-col gap-4 place-content-center ">
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-full">
-              <VideoLeft url={rageroom} />
+              <Image src={rage}/>
             </div>
             <div className="text-white text-2xl font-extrabold font-dancing absolute">
               Release Your Anger
@@ -159,7 +158,7 @@ const MainPage = () => {
         <div className="w-1/4 h-1/3 flex flex-col gap-4 place-content-center ">
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-full">
-              <VideoLeft url={product_v} />
+              <Image src={info}/>
             </div>
             <div className="text-white text-2xl font-extrabold absolute font-dancing">
               Gift Your Loved Ones
