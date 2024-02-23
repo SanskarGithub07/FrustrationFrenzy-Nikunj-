@@ -11,12 +11,12 @@ export default function ContactUsForm() {
   }
   const message = "Appointment booked at 9 AM";
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full ">
       <form
-        className="flex flex-col gap-1 w-1/2 h-1/2 border-2 m-auto rounded-xl border-black p-4"
+        className="flex flex-col gap-1 w-1/2 h-1/2 border-2 m-auto rounded-xl bg-dark-green border-black p-4"
         onSubmit={handleSubmit}
       >
-        <label htmlFor="name" className="text-dark-green text-xl">
+        <label htmlFor="name" className="text-white text-xl">
           Name
         </label>
         <input
@@ -24,10 +24,10 @@ export default function ContactUsForm() {
           id="name"
           type="name"
           name="name"
-          className="text-black bg-white-green p-2"
+          className="text-black bg-white p-2"
         />
         <ValidationError prefix="Name" field="name" errors={state.errors} />
-        <label htmlFor="email" className="text-dark-green text-xl">
+        <label htmlFor="email" className="text-white text-xl">
           Email
         </label>
         <input
@@ -35,14 +35,14 @@ export default function ContactUsForm() {
           id="email"
           type="email"
           name="email"
-          className="text-black text-xl bg-white-green p-2"
+          className="text-black text-xl bg-white p-2"
         />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
-        <label htmlFor="message" className="text-dark-green text-xl">
+        <label htmlFor="message" className="text-white text-xl">
           Message
         </label>
         <textarea
-          className="bg-white-green p-2 text-xl text-black"
+          className="bg-white p-2 text-xl text-black"
           id="message"
           name="message"
           required
