@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
         <div>
           <Link
-            href="/mainpage"
+            href="/"
             className="text-dark-green hover:text-sec-red font-crimson text-xl"
           >
             Home
@@ -24,18 +24,10 @@ const Navbar = () => {
         </div>
         <div>
           <Link
-            href="/rageroom"
+            href="/comingSoon"
             className="text-dark-green hover:text-sec-red font-crimson text-xl "
           >
             Smashroom
-          </Link>
-        </div>
-        <div>
-          <Link
-            href="/sessions"
-            className="text-dark-green hover:text-sec-red font-crimson text-xl "
-          >
-            Sessions
           </Link>
         </div>
         <div>
@@ -54,14 +46,6 @@ const Navbar = () => {
             About us
           </Link>
         </div>
-        <>
-          <Link
-            href="/sessions"
-            className=" text-lg px-2 font-bold text-sec-red hover:bg-sec-red hover:text-white-green hover:border-b-black text-center"
-          >
-            Available Doctors
-          </Link>
-        </>
       </nav>
     </header>
   );
