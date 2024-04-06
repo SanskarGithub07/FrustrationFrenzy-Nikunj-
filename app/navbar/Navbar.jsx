@@ -24,7 +24,7 @@ const Navbar = () => {
         </div>
         <div>
           <Link
-            href="/comingSoon"
+            href="/ragebooking"
             className="text-dark-green hover:text-sec-red font-crimson text-xl "
           >
             Smashroom
