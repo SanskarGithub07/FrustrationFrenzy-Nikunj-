@@ -1,5 +1,5 @@
 "use client";
-import { useEffect,useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
@@ -8,13 +8,13 @@ import bg from "./bg01.png";
 import bgc1 from "../../public/ffzy.png";
 import rage from "../../public/rageroom.jpg";
 import info from "../../public/info.jpg";
-import sess from "../../public/session.jpg"
+import sess from "../../public/session.jpg";
 import Link from "next/link";
 import bg_footer from "../../public/footer_bg.png";
-import Unleash from "../Components/Unleash"
+import Unleash from "../Components/Unleash";
 import { useSpring, animated, config } from "react-spring";
 import { useState } from "react";
-import Icons from "../Components/Icons"
+import Icons from "../Components/Icons";
 
 gsap.registerPlugin(ScrollTrigger);
 const MainPage = () => {
@@ -36,18 +36,17 @@ const MainPage = () => {
     setShowImage(true);
   }, []);
 
+  const refs = useRef([]);
 
- const refs = useRef([]);
- 
-// const ref = useRef(null);
+  // const ref = useRef(null);
 
- refs.current = [];
+  refs.current = [];
 
- const addToRefs = (el) => {
-   if (el && !refs.current.includes(el)) {
-     refs.current.push(el);
-   }
- };
+  const addToRefs = (el) => {
+    if (el && !refs.current.includes(el)) {
+      refs.current.push(el);
+    }
+  };
   // useEffect(() => {
   //   gsap.from(ref.current, {
   //     duration: 1,
@@ -55,26 +54,26 @@ const MainPage = () => {
   //     ease: "power1.out",
   //   });
   // }, []);
-   
- useEffect(() => {
-   refs.current.forEach((el, index) => {
-     gsap.fromTo(
-       el,
-       { autoAlpha: 0 },
-       {
-         duration: 1,
-         autoAlpha: 1,
-         ease: "none",
-         scrollTrigger: {
-           id: `section-${index + 1}`,
-           trigger: el,
-           start: "top center+=100",
-           toggleActions: "play none none reverse",
-         },
-       }
-     );
-   });
- }, []);
+
+  useEffect(() => {
+    refs.current.forEach((el, index) => {
+      gsap.fromTo(
+        el,
+        { autoAlpha: 0 },
+        {
+          duration: 1,
+          autoAlpha: 1,
+          ease: "none",
+          scrollTrigger: {
+            id: `section-${index + 1}`,
+            trigger: el,
+            start: "top center+=100",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+  }, []);
 
   return (
     <div className="w-full flex-col p-0 m-0">
@@ -116,14 +115,14 @@ const MainPage = () => {
         <div className="w-1/4 h-1/3 flex flex-col gap-4 place-content-center ">
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-full">
-              <Image src={sess}/>
+              <Image src={sess} />
             </div>
             <div className="text-white text-2xl font-extrabold font-dancing absolute">
               Personal Guidance
             </div>
           </div>
           <div className="text-dark-green w-full text-center p-4 text-3xl font-crimson">
-            Sessions
+            Events
           </div>
           <Link href="./sessions">
             <div className="text-black w-full flex justify-center">
@@ -136,7 +135,7 @@ const MainPage = () => {
         <div className="w-1/4 h-1/3 flex flex-col gap-4 place-content-center ">
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-full">
-              <Image src={rage}/>
+              <Image src={rage} />
             </div>
             <div className="text-white text-2xl font-extrabold font-dancing absolute">
               Release Your Anger
@@ -147,7 +146,7 @@ const MainPage = () => {
             Smash Room
           </div>
 
-          <Link href="/smashroom">
+          <Link href="/ragebooking">
             <div className="text-black w-full flex justify-center">
               <button className=" p-4 w-1/2 bg-sec-red text-white-green ">
                 Explore
@@ -158,7 +157,7 @@ const MainPage = () => {
         <div className="w-1/4 h-1/3 flex flex-col gap-4 place-content-center ">
           <div className="w-full h-full flex items-center justify-center">
             <div className="w-full">
-              <Image src={info}/>
+              <Image src={info} />
             </div>
             <div className="text-white text-2xl font-extrabold absolute font-dancing">
               Gift Your Loved Ones
